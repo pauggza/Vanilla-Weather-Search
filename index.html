@@ -1,33 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
     <title>Paulina Weather App</title>
   </head>
   <body>
-    <header>
-      <form>
-        <input type="search" placeholder="Enter a city..." required />
-        <input type="submit" value="search" />
-      </form>
-    </header>
-    <main>
-      <div>
-        <h1>Paris</h1>
-        <p>
-          Saturday 14:36, clear sky <br />
-          Humidity: 89%, Wind: 3.6km/h
-        </p>
-      </div>
-      <div>🌤️ 12 °C</div>
-    </main>
-    <footer>
-      Coded by <a href="https://github.com/pauggza">Paulina ✨ </a>,
-      open-sourced on on
-      <a href="https://github.com/pauggza?tab=repositories">Github</a> and
-      hosted on
-      <a href="https://vanilla-weather-search-pauggza.netlify.app/">Netlify</a>
-    </footer>
+    <div class="weather-app">
+      <header>
+        <form>
+          <input type="search" placeholder="Enter a city..." required />
+          <input type="submit" value="search" />
+        </form>
+      </header>
+      <main>
+        <div>
+          <h1>Paris</h1>
+          <p>
+            Saturday 14:36, clear sky <br />
+            Humidity: 89%, Wind: 3.6km/h
+          </p>
+        </div>
+        <div>🌤️ 12 °C</div>
+      </main>
+      <footer>
+        Coded by <a href="https://github.com/pauggza">Paulina ✨ </a>,
+        open-sourced on on
+        <a href="https://github.com/pauggza?tab=repositories">Github</a> and
+        hosted on
+        <a href="https://vanilla-weather-search-pauggza.netlify.app/"
+          >Netlify</a
+        >
+      </footer>
+    </div>
   </body>
 </html>
