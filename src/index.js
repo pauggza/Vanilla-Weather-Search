@@ -6,18 +6,29 @@ function refreshWeather(response) {
   let humidityElement = document.querySelector("#humidity");
   let speedElement = document.querySelector("#speed");
   let timeElement = document.querySelector("#time");
-  let humidity = response.data.temperature.humidity;
-  let speed = response.data.wind.speed;
-  let date = new Date(response.data.time * 1000);
   let iconElement = document.querySelector("#icon");
+  let date = new Date(response.data.time * 1000);
 
   cityElement.innerHTML = response.data.city;
   timeElement.innerHTML = formatDate(date);
   descriptionElement.innerHTML = response.data.condition.description;
-  humidityElement.innerHTML = `${humidity}%`;
-  speedElement.innerHTML = `${speed}km/h`;
+  humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
+  speedElement.innerHTML = `${response.data.wind.speed}km/h`;
   temperatureElement.innerHTML = Math.round(temperature);
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`;
+
+  let body = document.querySelector("body");
+  let condition = response.data.condition.description.toLowerCase();
+  body.classList.remove("cloudy", "rainy");
+  if (
+    condition.includes("rain") ||
+    condition.includes("snow") ||
+    temperature < 10
+  ) {
+    body.classList.add("rainy");
+  } else if (condition.includes("cloud") || condition.includes("scattered")) {
+    body.classList.add("cloudy");
+  }
 }
 
 function formatDate(date) {

@@ -13,18 +13,31 @@ body {
     rgba(255, 209, 220, 1) 100%
   );
   font-family: "Funnel Sans", sans-serif;
+  transition: background 0.5s ease;
 }
 
-a {
-  color: #724cf9;
+body.cloudy {
+  background: linear-gradient(
+    356deg,
+    rgba(202, 125, 249, 1) 0%,
+    rgba(209, 210, 230, 1) 100%
+  );
+}
+
+body.rainy {
+  background: linear-gradient(
+    356deg,
+    rgba(86, 69, 146, 1) 0%,
+    rgba(6, 10, 69, 1) 100%
+  );
 }
 
 .weather-app {
   background-color: white;
   max-width: 600px;
-  margin: 45px auto;
+  margin: 60px auto;
   box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
-  padding: 50px;
+  padding: 40px 60px;
   border-radius: 40px;
   color: #564592;
 }
@@ -51,6 +64,18 @@ header {
   color: white;
   margin-left: 5px;
   font-size: 16px;
+  transition: all 0.2s ease-in-out;
+}
+
+.search-form-button:hover {
+  background-color: #f896d8;
+  color: white;
+}
+
+.search-form-button:active {
+  transform: scale(0.95);
+  background-color: #edf67d;
+  color: #564592;
 }
 
 main {
@@ -85,7 +110,6 @@ main {
   width: 88px;
   height: 88px;
   margin-top: 5px;
-  color: #edf67d;
 }
 
 .weather-app-temperature {
@@ -104,6 +128,45 @@ footer {
   padding: 30px 0 0 0;
   text-align: center;
   font-size: 14px;
-  color: #212121;
-  opacity: 60%;
+  color: #564592;
+  opacity: 0.8;
+  line-height: 2;
+}
+footer a {
+  color: #724cf9;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  position: relative; /* Needed for the custom underline effect */
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+footer a:hover {
+  color: #f896d8;
+  background-color: rgba(248, 150, 216, 0.1);
+  text-decoration: underline;
+}
+footer a:active {
+  color: #564592;
+  background-color: #edf67d;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+
+.app-logo {
+  max-width: 90px;
+  filter: brightness(0) invert(1);
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.app-logo:hover {
+  opacity: 1;
+  transform: scale(1.05);
 }
