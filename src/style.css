@@ -1,17 +1,19 @@
-html,
-body {
+html {
   height: 100%;
-  margin: 0; /* Remove default body margin */
 }
 /* this is to make sure the gradient does not get cut */
 
 body {
+  margin: 0;
+  min-height: 100%;
   background: #f896d8;
   background: linear-gradient(
     356deg,
     rgba(248, 150, 216, 1) 0%,
     rgba(255, 209, 220, 1) 100%
   );
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   font-family: "Funnel Sans", sans-serif;
   transition: background 0.5s ease;
 }
@@ -22,6 +24,7 @@ body.cloudy {
     rgba(202, 125, 249, 1) 0%,
     rgba(209, 210, 230, 1) 100%
   );
+  background-attachment: fixed;
 }
 
 body.rainy {
@@ -30,6 +33,7 @@ body.rainy {
     rgba(86, 69, 146, 1) 0%,
     rgba(6, 10, 69, 1) 100%
   );
+  background-attachment: fixed;
 }
 
 .weather-app {
