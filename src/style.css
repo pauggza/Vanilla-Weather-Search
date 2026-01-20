@@ -137,24 +137,23 @@ main {
   text-align: center;
   font-size: 16px;
   line-height: 20px;
+  margin-bottom: 10px;
 }
 
 .weather-forecast-icon {
+  font-size: 38px;
   text-align: center;
-  font-size: 28px;
-  margin-bottom: 5px;
 }
-
 .weather-forecast-temperatures {
-  color: #f896d8;
   text-align: center;
+  color: #f896d8;
+  margin-top: 10px;
   display: flex;
   justify-content: center;
-  margin-top: 5px;
 }
 
 .weather-forecast-temperature {
-  padding: 0 5px;
+  padding: 0 10px;
 }
 
 footer {
